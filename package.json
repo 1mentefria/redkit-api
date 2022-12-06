@@ -1,0 +1,31 @@
+{
+  "name": "redkit-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1mentefria/redkit-api.git"
+  },
+  "keywords": [
+    "cybersecurity",
+    "redteam",
+    "pentesting",
+    "hacking",
+    "vulnerability"
+  ],
+  "author": "Ismael Rodríguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1mentefria/redkit-api/issues"
+  },
+  "homepage": "https://github.com/1mentefria/redkit-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
