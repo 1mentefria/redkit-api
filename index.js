@@ -25,7 +25,7 @@ app.get('/api/notes/:id', (request, response) => {
         response.send("Valor no encontrado wey")
 })
 
-const PORT = 80
+const PORT = 7777
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)
 })
