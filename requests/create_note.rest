@@ -1,0 +1,6 @@
+POST http://localhost:7777/api/notes
+Content-Type: application/json
+
+{
+    "content": "hasta luego"
+}
