@@ -6,11 +6,13 @@ app.use(express.json()) // Esto es para poder parsear json recibidos en el body
 let notes = [
     {
         "id": 1,
-        "content": "hola"
+        "content": "hola",
+        "important": true
     },
     {
         "id": 2,
-        "content": "adios"
+        "content": "adios",
+        "important": false
     }
 ]
 
@@ -35,9 +37,21 @@ app.delete('/api/notes/:id', (request, response) => {
 
 app.post('/api/notes', (request, response) => {
     const note = request.body
-    console.log(note)
 
-    response.json(note)
+    if (!note || !note.content) {
+        return response.status(400).json({
+            error: 'note.content is missing'
+        })
+    }
+    const ids = notes.map(note => note.id) // Construimos otro array solo con los ids de notes
+    const maxId = Math.max(... ids) // Obtenemos el valor máximo de todos los ids
+    const newNote = {
+        id: maxId + 1,
+        content: note.content,
+        important: typeof note.important != 'undefined' ? note.important : false
+    }
+    notes = [...notes, newNote] // Añadimos la nueva nota al array de notas
+    response.json(newNote)
 })
 
 
