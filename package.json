@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/1mentefria/redkit-api#readme",
   "devDependencies": {
+    "eslint": "^8.29.0",
     "nodemon": "^2.0.20"
   },
   "dependencies": {
